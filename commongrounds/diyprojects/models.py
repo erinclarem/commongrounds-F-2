@@ -29,6 +29,9 @@ class Project(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return f"{self.title}"
+
     def get_absolute_url(self):
         return reverse('diyprojects:project_detail', args=[str(self.id)])
 
