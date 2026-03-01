@@ -3,6 +3,6 @@
 {% block content %}
 <a href="/localevents/list">Home</a>
 <h1>Local Event Detail</h1>
-    <p>{{ localevent.name }}</p>
-    <p>{{ localevent.description }}</p>
+<p>{{ localevent.name }}</p>
+<p>{{ localevent.description }}</p>
 {% endblock %}
