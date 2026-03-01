@@ -4,10 +4,13 @@
 <h3>Category: {{project.category}}</h3>
 <h3>Description:</h3>
 <p>{{project.description}}</p>
+<br>
 <h3>Materials:</h3>
-<p>{{project.materials}}</p>
+<p>{{project.materials|linebreaksbr}}</p>
+<br>
 <h3>Steps:</h3>
-<p>{{project.steps}}</p>
-<h3>Created On: {{project.created_on}}</h3>
-<h3>Updated On: {{project.updated_on}}</h3>
+<p>{{project.steps|linebreaksbr}}</p>
+<br>
+<h4>Created On: {{project.created_on}}</h4>
+<h4>Updated On: {{project.updated_on}}</h4>
 {% endblock %}
