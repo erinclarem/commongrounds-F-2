@@ -4,15 +4,15 @@ from django.views.generic.base import TemplateView
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import LocalEvents
+from .models import Event
 # Create your views here.
 
 
 class LocalEventsListView(ListView):
-    model = LocalEvents
+    model = Event
     template_name = "localevents_list.html"
 
 
-class LocalEventsDetailView(LoginRequiredMixin, DetailView):
-    model = LocalEvents
+class LocalEventDetailView(LoginRequiredMixin, DetailView):
+    model = Event
     template_name = "localevent_detail.html"
