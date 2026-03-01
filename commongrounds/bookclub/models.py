@@ -22,7 +22,7 @@ class Book (models.Model):
         null=True,
         related_name='books'
     )
-    author = models.CharField()
+    author = models.CharField(max_length=100)
     publication_year = models.IntegerField()
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
