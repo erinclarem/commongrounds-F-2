@@ -11,7 +11,6 @@ class CommissionType(models.Model):
     def __str__(self):
         return self.name
 
-
 class Commission(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
@@ -25,5 +24,3 @@ class Commission(models.Model):
     def __str__(self):
         return self.title
 
-    def get_absolute_url(self):
-        return reverse('commission_detail', args=[self.pk])
