@@ -29,13 +29,10 @@ class Event(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"{self.title} at {self.location} from {self.start_time} to {self.end_time}"
+        return f"{self.title}"
 
     def get_absolute_url(self):
         return reverse('localevents:localevent_detail', args=[str(self.id)])
 
     class Meta:
         ordering = ['-created_on']
-
-
-# Create your models here.
